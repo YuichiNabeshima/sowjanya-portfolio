@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800;
+    background-color: #fef9fc;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4 text-center relative;
+  }
+
+  .section-title::after {
+    content: "";
+    @apply absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary rounded-sm;
+  }
+
+  .section-content {
+    @apply mt-24;
+  }
+
+  .btn {
+    @apply inline-block py-3 px-7 bg-primary-dark text-white font-semibold rounded-xl transition-all duration-300 hover:bg-primary-dark/90 hover:shadow-lg hover:-translate-y-1 border-2 border-primary-dark;
+  }
+
+  .btn-outline {
+    @apply bg-white text-primary font-medium rounded-xl transition-all duration-300 hover:bg-gray-100 hover:shadow-lg hover:-translate-y-1 border-2 border-primary;
+  }
+
+  .card {
+    @apply bg-white/70 backdrop-blur-sm rounded-xl shadow-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover;
+  }
+}
+
+:root {
+  --primary: #ff7eb3;
+  --primary-light: #ffa8d0;
+  --primary-dark: #e05a8f;
+  --secondary: #7ec1ff;
+  --secondary-light: #a8d4ff;
+  --secondary-dark: #5a9fe0;
+  --accent: #b57eff;
+  --background: #fef9fc;
+  --text: #333333;
+  --text-light: #666666;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray: #e0e0e0;
+  --gray-dark: #9e9e9e;
+  --shadow: rgba(0, 0, 0, 0.1);
+
+  --container-width: 1200px;
+  --header-height: 80px;
+  --section-spacing: 100px;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
+
+/* Custom styles for progress bar animation */
+.skill-progress-bar {
+  transition: width 1.5s ease-out;
+  width: 0;
+}
+
