@@ -51,19 +51,19 @@ const Skills = () => {
   }, [])
 
   return (
-    <section id="skills" className="py-20 bg-white/30 backdrop-blur-sm" ref={sectionRef}>
+    <section id="skills" className="py-20 bg-white/30 backdrop-blur-sm overflow-hidden" ref={sectionRef}>
       <div className="container">
         <AnimateOnScroll animation="opacity-100 translate-y-0">
           <h2 className="section-title">My Skills</h2>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-16">
           <AnimateOnScroll animation="opacity-100 translate-x-0" className="-translate-x-10" delay={200}>
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-card">
-              <h3 className="text-2xl font-semibold mb-8 text-primary-dark relative inline-block after:content-[''] after:absolute after:w-12 after:h-0.5 after:bg-primary after:bottom-[-10px] after:left-0">
+            <div className="bg-white/70 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-card">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-primary-dark relative inline-block after:content-[''] after:absolute after:w-12 after:h-0.5 after:bg-primary after:bottom-[-10px] after:left-0">
                 Technical Skills
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-5 sm:space-y-6">
                 {technicalSkills.map((skill, index) => (
                   <AnimateOnScroll
                     key={index}
@@ -95,11 +95,11 @@ const Skills = () => {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="opacity-100 translate-x-0" className="translate-x-10" delay={200}>
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-card">
-              <h3 className="text-2xl font-semibold mb-8 text-primary-dark relative inline-block after:content-[''] after:absolute after:w-12 after:h-0.5 after:bg-primary after:bottom-[-10px] after:left-0">
+            <div className="bg-white/70 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-card">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-primary-dark relative inline-block after:content-[''] after:absolute after:w-12 after:h-0.5 after:bg-primary after:bottom-[-10px] after:left-0">
                 Soft Skills
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-5 sm:space-y-6">
                 {softSkills.map((skill, index) => (
                   <AnimateOnScroll
                     key={index}

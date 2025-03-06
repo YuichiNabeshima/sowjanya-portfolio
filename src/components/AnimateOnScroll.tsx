@@ -39,15 +39,18 @@ const AnimateOnScroll = ({ children, animation, threshold = 0.1, delay = 0, clas
     }
   }, [threshold])
 
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768
+
   return (
     <div
       ref={ref}
-      className={`${className} ${isVisible ? animation : "opacity-0"}`}
+      className={`${className} ${isVisible || isMobile ? animation : "opacity-0"}`}
       style={{
         transitionDelay: `${delay}ms`,
         transitionProperty: "all",
         transitionDuration: "1000ms",
         transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+        transform: isMobile ? "none" : undefined,
       }}
     >
       {children}

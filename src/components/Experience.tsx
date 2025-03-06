@@ -54,7 +54,7 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gray-50/30 backdrop-blur-sm">
+    <section id="experience" className="py-20 bg-gray-50/30 backdrop-blur-sm overflow-hidden">
       <div className="container">
         <AnimateOnScroll animation="opacity-100 translate-y-0">
           <h2 className="section-title">Experience & Education</h2>
