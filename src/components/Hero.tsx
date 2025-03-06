@@ -50,7 +50,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section id="home" className="min-h-screen pt-20 flex items-center relative">
+    <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden">
       <div className="container">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
           <div className="w-full lg:w-1/2 text-center lg:text-left">
@@ -58,31 +58,31 @@ const Hero = () => {
               className={`transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: "300ms" }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
                 Hi, I'm{" "}
                 <span className="text-primary relative inline-block after:content-[''] after:absolute after:w-full after:h-3 after:bg-primary/20 after:bottom-1 after:left-0 after:-z-10 after:rounded-md">
                   Sowjanya
                 </span>
               </h1>
-              <h2 className="text-3xl md:text-4xl font-semibold mb-5 text-gray-600">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-5 text-gray-600">
                 I'm a <span className="text-accent relative" ref={typingRef}></span>
                 <span className="animate-blink">|</span>
               </h2>
-              <p className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8">
+              <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 px-4 sm:px-0">
                 Transforming raw data into meaningful insights and building robust data pipelines to drive business
                 decisions.
               </p>
-              <div className="flex gap-5 justify-center lg:justify-start">
+              <div className="flex gap-4 justify-center lg:justify-start mb-16 sm:mb-0">
                 <a
                   href="#contact"
-                  className={`btn transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                  className={`btn py-2 px-5 sm:py-3 sm:px-7 transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                   style={{ transitionDelay: "600ms" }}
                 >
                   Get In Touch
                 </a>
                 <a
                   href="#projects"
-                  className={`btn btn-outline transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                  className={`btn-outline py-2 px-5 sm:py-3 sm:px-7 transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                   style={{ transitionDelay: "800ms" }}
                 >
                   View My Work
@@ -95,7 +95,7 @@ const Hero = () => {
             className={`w-full lg:w-1/2 relative transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             style={{ transitionDelay: "500ms" }}
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full border-4 border-primary/30 overflow-hidden relative z-10">
+            <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 mx-auto rounded-full border-4 border-primary/30 overflow-hidden relative z-10">
               <img src="/placeholder.svg?height=500&width=500" alt="Sowjanya" className="w-full h-full object-cover" />
             </div>
             <div className="absolute inset-0 z-0">
@@ -108,7 +108,7 @@ const Hero = () => {
       </div>
 
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 text-center transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className={`absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 text-center transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         style={{ transitionDelay: "1000ms" }}
       >
         <a href="#about" className="inline-block">

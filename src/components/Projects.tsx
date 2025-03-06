@@ -41,13 +41,13 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-white/30 backdrop-blur-sm">
+    <section id="projects" className="py-20 bg-white/30 backdrop-blur-sm overflow-hidden">
       <div className="container">
         <AnimateOnScroll animation="opacity-100 translate-y-0">
           <h2 className="section-title">My Projects</h2>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-16">
           {projects.map((project, index) => (
             <AnimateOnScroll
               key={index}
@@ -56,7 +56,7 @@ const Projects = () => {
               delay={200 + index * 100}
             >
               <div className="bg-white/70 backdrop-blur-sm rounded-xl overflow-hidden shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-card-hover h-full">
-                <div className="relative h-60 overflow-hidden">
+                <div className="relative h-48 sm:h-60 overflow-hidden">
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
@@ -71,11 +71,11 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <span className="inline-block px-3 py-1 text-xs text-white bg-primary rounded-full mb-3">
                     {project.category}
                   </span>
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-gray-600 text-sm mb-5">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, i) => (

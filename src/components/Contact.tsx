@@ -42,16 +42,16 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-50/30 backdrop-blur-sm">
+    <section id="contact" className="py-20 bg-gray-50/30 backdrop-blur-sm overflow-hidden">
       <div className="container">
         <AnimateOnScroll animation="opacity-100 translate-y-0">
           <h2 className="section-title">Get In Touch</h2>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 mt-16">
           <AnimateOnScroll animation="opacity-100 translate-x-0" className="lg:col-span-2 -translate-x-10" delay={200}>
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-card">
-              <h3 className="text-2xl font-semibold mb-5 text-primary-dark">Let's Connect</h3>
+            <div className="bg-white/70 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-card">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-5 text-primary-dark">Let's Connect</h3>
               <p className="text-gray-600 mb-8">
                 I'm always open to discussing new projects, opportunities, or partnerships. Feel free to reach out to me
                 using the contact form or through my social media profiles.
@@ -59,11 +59,11 @@ const Contact = () => {
 
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center text-white shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-light rounded-full flex items-center justify-center text-white shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -75,17 +75,17 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">Phone</h4>
+                    <h4 className="text-base sm:text-lg font-medium mb-1">Phone</h4>
                     <p className="text-gray-600">+81 90 1234 5678</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center text-white shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-light rounded-full flex items-center justify-center text-white shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -98,17 +98,17 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">Email</h4>
+                    <h4 className="text-base sm:text-lg font-medium mb-1">Email</h4>
                     <p className="text-gray-600">sowjanya@example.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center text-white shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-light rounded-full flex items-center justify-center text-white shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -121,7 +121,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">Location</h4>
+                    <h4 className="text-base sm:text-lg font-medium mb-1">Location</h4>
                     <p className="text-gray-600">Burnaby, BC</p>
                   </div>
                 </div>
@@ -130,12 +130,12 @@ const Contact = () => {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"
+                  className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -150,12 +150,12 @@ const Contact = () => {
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"
+                  className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -168,12 +168,12 @@ const Contact = () => {
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"
+                  className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -181,7 +181,7 @@ const Contact = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 23 3z"></path>
                   </svg>
                 </a>
               </div>
@@ -189,8 +189,8 @@ const Contact = () => {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="opacity-100 translate-x-0" className="lg:col-span-3 translate-x-10" delay={400}>
-            <form onSubmit={handleSubmit} className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-card">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <form onSubmit={handleSubmit} className="bg-white/70 backdrop-blur-sm p-5 sm:p-8 rounded-xl shadow-card">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                 <div>
                   <input
                     type="text"

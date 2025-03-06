@@ -4,13 +4,13 @@ import AnimateOnScroll from "./AnimateOnScroll"
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50/30 backdrop-blur-sm">
+    <section id="about" className="py-20 bg-gray-50/30 backdrop-blur-sm overflow-hidden">
       <div className="container">
         <AnimateOnScroll animation="opacity-100 translate-y-0">
           <h2 className="section-title">About Me</h2>
         </AnimateOnScroll>
 
-        <div className="flex flex-col lg:flex-row items-center gap-16 mt-16">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mt-16">
           <AnimateOnScroll
             animation="opacity-100 translate-x-0"
             className="w-full lg:w-2/5 relative -translate-x-10"
@@ -20,7 +20,7 @@ const About = () => {
               <img
                 src="/placeholder.svg?height=400&width=400"
                 alt="Sowjanya"
-                className="w-full max-w-md mx-auto rounded-xl shadow-lg"
+                className="w-full max-w-xs sm:max-w-sm mx-auto rounded-xl shadow-lg"
               />
             </div>
             <div className="absolute top-0 left-0 w-full h-full z-0">
@@ -29,8 +29,12 @@ const About = () => {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll animation="opacity-100 translate-x-0" className="w-full lg:w-3/5 translate-x-10" delay={400}>
-            <h3 className="text-2xl font-semibold mb-5 text-primary-dark">
+          <AnimateOnScroll
+            animation="opacity-100 translate-x-0"
+            className="w-full lg:w-3/5 translate-x-10 px-4 sm:px-0"
+            delay={400}
+          >
+            <h3 className="text-xl sm:text-2xl font-semibold mb-5 text-primary-dark">
               Hello! I'm Sowjanya, a passionate Data Engineer
             </h3>
             <p className="text-gray-600 mb-5">
@@ -43,7 +47,7 @@ const About = () => {
               technical expertise with a deep understanding of business needs to deliver results that matter.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
               <div className="flex flex-col">
                 <span className="font-semibold text-primary mb-1">Name:</span>
                 <span className="text-gray-600">Sowjanya</span>
