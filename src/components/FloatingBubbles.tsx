@@ -1,6 +1,29 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
 const FloatingBubbles = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // モバイル環境かどうかを判定
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    // 初期チェック
+    checkMobile()
+
+    // リサイズイベントでもチェック
+    window.addEventListener("resize", checkMobile)
+
+    return () => {
+      window.removeEventListener("resize", checkMobile)
+    }
+  }, [])
+
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div className={`fixed inset-0 -z-10 pointer-events-none ${isMobile ? "overflow-hidden" : ""}`}>
       {/* Primary color bubbles */}
       <div className="absolute w-64 h-64 rounded-full bg-primary/10 -top-20 left-1/4 animate-float-slow"></div>
       <div className="absolute w-40 h-40 rounded-full bg-primary/15 bottom-1/3 -right-10 animate-float"></div>

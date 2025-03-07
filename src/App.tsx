@@ -14,22 +14,35 @@ import FloatingBubbles from "./components/FloatingBubbles"
 
 function App() {
   const [loading, setLoading] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    // Simulate loading time
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    checkMobile()
+
+    window.addEventListener("resize", checkMobile)
+
     const timer = setTimeout(() => {
       setLoading(false)
     }, 2000)
 
-    return () => clearTimeout(timer)
-  }, [])
+    document.body.style.overflow = loading ? "hidden" : "visible"
+
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener("resize", checkMobile)
+    }
+  }, [loading])
 
   if (loading) {
     return <Loader />
   }
 
   return (
-    <div className="min-h-screen flex flex-col relative overflow-x-hidden w-full">
+    <div className={`min-h-screen flex flex-col relative w-full ${isMobile ? "overflow-x-hidden" : ""}`}>
       <FloatingBubbles />
       <Header />
       <main className="flex-grow w-full">

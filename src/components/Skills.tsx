@@ -51,7 +51,7 @@ const Skills = () => {
   }, [])
 
   return (
-    <section id="skills" className="py-20 bg-white/30 backdrop-blur-sm overflow-hidden" ref={sectionRef}>
+    <section id="skills" className="py-20 bg-white/30 backdrop-blur-sm" ref={sectionRef}>
       <div className="container">
         <AnimateOnScroll animation="opacity-100 translate-y-0">
           <h2 className="section-title">My Skills</h2>
@@ -71,19 +71,16 @@ const Skills = () => {
                     className="translate-y-10"
                     delay={300 + index * 100}
                   >
-                    <div className="mb-4">
-                      <div className="flex justify-between mb-2">
+                    <div className="mb-4 w-full">
+                      <div className="flex justify-between mb-2 items-center">
                         <span className="font-medium">{skill.name}</span>
-                        <span className="text-primary font-semibold">{skill.level}%</span>
+                        <span className="text-primary font-semibold min-w-[40px] text-right">{skill.level}%</span>
                       </div>
-                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden w-full">
                         <div
-                          className="h-full rounded-full"
+                          className="h-full rounded-full bg-primary transition-[width] duration-1000 ease-out"
                           style={{
                             width: isInView ? `${skill.level}%` : "0%",
-                            transitionDelay: `${index * 100}ms`,
-                            backgroundColor: "#ff7eb3",
-                            transition: "width 1.5s ease-out",
                           }}
                         ></div>
                       </div>
@@ -107,19 +104,16 @@ const Skills = () => {
                     className="translate-y-10"
                     delay={300 + index * 100}
                   >
-                    <div className="mb-4">
-                      <div className="flex justify-between mb-2">
+                    <div className="mb-4 w-full">
+                      <div className="flex justify-between mb-2 items-center">
                         <span className="font-medium">{skill.name}</span>
-                        <span className="text-secondary font-semibold">{skill.level}%</span>
+                        <span className="text-secondary font-semibold min-w-[40px] text-right">{skill.level}%</span>
                       </div>
-                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden w-full">
                         <div
-                          className="h-full rounded-full"
+                          className="h-full rounded-full bg-secondary transition-[width] duration-1000 ease-out"
                           style={{
                             width: isInView ? `${skill.level}%` : "0%",
-                            transitionDelay: `${index * 100}ms`,
-                            backgroundColor: "#7ec1ff",
-                            transition: "width 1.5s ease-out",
                           }}
                         ></div>
                       </div>
