@@ -1,7 +1,5 @@
 "use client"
 
-import type React from "react"
-
 import { useState, useEffect, useRef } from "react"
 
 const Header = () => {
@@ -80,7 +78,7 @@ const Header = () => {
     setIsMenuOpen(false)
   }
 
-  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleAnchorClick = () => {
     closeMenu()
   }
 
